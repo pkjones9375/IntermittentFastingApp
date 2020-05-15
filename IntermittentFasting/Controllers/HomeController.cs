@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using IntermittentFastingApp.Models;
+using IntermittentFasting.Models;
 
-namespace IntermittentFastingApp.Controllers
+namespace IntermittentFasting.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace IntermittentFastingApp.Models
+namespace IntermittentFasting.Models
 {
     public class ErrorViewModel
     {
