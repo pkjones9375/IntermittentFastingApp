@@ -9,8 +9,10 @@ namespace IntermittentFasting
         public string Name { get; set; }
         public int Weight { get; set; }
         public int HeightInches { get; set; }
-        public decimal StartBMI { get; set }
+        public decimal StartBMI { get; set; }
         public decimal LastBMI { get; set; }
-        public int FastingHours { get; set; }
+        public int TimeToFast { get; set; }
+        public DateTime Date { get; set; }
+        
     }
 }
