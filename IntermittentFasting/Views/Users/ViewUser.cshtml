@@ -1,0 +1,29 @@
+﻿<!--Next up: Brett enters the HTML for displaying the Users table-->
+<!--ENTER THE BMI LINE UNDER 'StartWeight'-->
+@model User
+
+<h3>@Model.Name Information</h3>
+
+<table class="table">
+    <tr>
+        <th>User ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Height In Inches</th>
+        <th>Start Weight</th>
+        <!--BMI segment goes here-->
+        <th>Fast Start Date</th>
+        <th>Time to Fast</th>
+    </tr>
+
+    <tr>
+        <td>@Model.UserID</td>
+        <td>@Model.FirstName</td>
+        <td>@Model.LastName</td>
+        <td>@Model.HeightInInches</td>
+        <td>@Model.StartWeight</td>
+        <!--BMI segment goes here-->
+        <td>@Model.FastStartDate</td>
+        <td>@Model.TimeToFast</td>
+    </tr>
+</table>
