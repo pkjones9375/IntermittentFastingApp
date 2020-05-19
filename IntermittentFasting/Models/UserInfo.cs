@@ -13,7 +13,7 @@ namespace IntermittentFasting.Models
         public decimal HeightInInches { get; set; }
         public decimal StartWeight { get; set; }
         public DateTime FastStartDate { get; set; }
-        public DateTime TimeToFast { get; set; }
+        public int TimeToFast { get; set; }
     }
 }
 // blah blah
