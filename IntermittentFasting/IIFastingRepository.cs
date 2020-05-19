@@ -8,6 +8,7 @@ namespace IntermittentFasting
 {
     interface IIFastingRepository
     {
+        //our stubbed-out methods that PK wrote
         //user table 
         public IEnumerable<UserInfo> GetAllUsers();
         public UserInfo GetUser(int userID);
