@@ -6,7 +6,7 @@ namespace IntermittentFasting
         //Contributed by Brad Sorrells
         public static string Bmi(double weight, double height)
         {
-            var bmi = weight / (height * height);
+            var bmi = 703 * (weight / (height * height));
             if (bmi <= 18.5)
                 return "Underweight";
             if (bmi <= 25)
