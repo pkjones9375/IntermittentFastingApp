@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 // BRETT'S NOTE: I think that this segment might be superfluous. Delete later?
 namespace IntermittentFasting
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
         //our stubbed-out methods that PK wrote
         //user table 

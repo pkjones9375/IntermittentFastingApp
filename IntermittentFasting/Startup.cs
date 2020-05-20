@@ -28,12 +28,12 @@ namespace IntermittentFasting
             //BRETT: Here's where I added in the IoC code:
             services.AddScoped<IDbConnection>((s) =>
             {
-                IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("intermittent_fasting_app"));
+                IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("IFDB"));
                 conn.Open();
                 return conn;
             });
 
-            services.AddTransient<IUserRepository>(); //Does a UserRepository come after IFR here?
+            services.AddTransient<IUserRepository, UserRepository>(); //Does a UserRepository come after IFR here?
 
             services.AddControllersWithViews();
         }
