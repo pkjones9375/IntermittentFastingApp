@@ -1,20 +1,41 @@
-﻿using System;
+﻿using IntermittentFasting.Models;
+using System;
+using System.Collections.Generic;
+
 namespace IntermittentFasting
 {
     //Here's the layout for our IF user info. Console will get/set BMI info
     //UserID will act as Primary Key in SQL
-    public class UserRepository
-        //*****Changed name of class to UserRepository, as it doesn't call the methods
-        //written by the IFastingRepository
+    public class UserRepository : IUserRepository   
     {
-        public int UserID { get; set; }
-        public string Name { get; set; }
-        public int HeightInches { get; set; }
-        public int Weight { get; set; }
-        public decimal StartBMI { get; set; }
-        public decimal LastBMI { get; set; }
-        public int TimeToFast { get; set; }
-        public DateTime Date { get; set; }
-        
+        public void DeleteUser(UserInfo userToDelete)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<UserInfo> GetAllUsers()
+        {
+            throw new NotImplementedException();
+        }
+
+        public UserInfo GetUser(int userID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<WeightInfo> GetWeightInfo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void NewUser(UserInfo newUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void WeighIn(WeightInfo newWeight)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

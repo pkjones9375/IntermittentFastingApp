@@ -12,5 +12,6 @@ namespace IntermittentFasting.Models
         public DateTime WeighInDate { get; set; }
         public decimal WeighIn { get; set; }
         public decimal CalculatedBMI { get; set; }
+        public decimal BMI { get; set; }
     }
 }
