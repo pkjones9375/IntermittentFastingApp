@@ -11,9 +11,9 @@ namespace IntermittentFasting.Controllers
 {
     public class UserController : Controller
     {
-        private readonly IFastingRepository repo;
+        private readonly UserRepository repo;
 
-        public UserController(IFastingRepository repo)
+        public UserController(UserRepository repo)
         {
             this.repo = repo;
         }
@@ -26,5 +26,28 @@ namespace IntermittentFasting.Controllers
 
             return View(users);
         }
+    }
+
+    //Enable user to View a product by entering its Product ID
+    public IActionResult ViewUser(int id)
+    {
+        var product = repo.GetUser(id);
+
+        return View(user);
+    }
+
+
+    //Entering the UpdateUser(int id) method here:
+    public IActionResult UpdateUser(int id)
+    {
+        UserRepository user = repo.GetUser(id);
+
+        repo.UpdateUser(user);
+
+        if(user == null)
+        {
+            return View("UserNotFound");
+        }
+        return View(user);
     }
 }
