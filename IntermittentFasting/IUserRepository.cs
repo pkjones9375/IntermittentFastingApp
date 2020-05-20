@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 // BRETT'S NOTE: I think that this segment might be superfluous. Delete later?
 namespace IntermittentFasting
 {
-    public interface IUserRepository
+    interface IUserRepository
     {
         //our stubbed-out methods that PK wrote
         //user table 
@@ -14,14 +14,12 @@ namespace IntermittentFasting
         public User GetUser(int userID);
         public void NewUser(User newUser);
         public void DeleteUser(User userToDelete);
-        public void UpdateUser(int userID);
         
 
         //weight table
 
         public IEnumerable<WeightInfo> GetWeightInfo();
         public void WeighIn(WeightInfo newWeight);
-
         
     }
 }
