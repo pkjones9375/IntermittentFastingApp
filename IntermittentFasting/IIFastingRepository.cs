@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+// BRETT'S NOTE: I think that this segment might be superfluous. Delete later?
 namespace IntermittentFasting
 {
     interface IIFastingRepository
