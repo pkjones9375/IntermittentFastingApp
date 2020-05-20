@@ -8,17 +8,17 @@ namespace IntermittentFasting
     //UserID will act as Primary Key in SQL
     public class UserRepository : IUserRepository   
     {
-        public void DeleteUser(UserInfo userToDelete)
+        public void DeleteUser(User userToDelete)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<UserInfo> GetAllUsers()
+        public IEnumerable<User> GetAllUsers()
         {
             throw new NotImplementedException();
         }
 
-        public UserInfo GetUser(int userID)
+        public User GetUser(int userID)
         {
             throw new NotImplementedException();
         }
@@ -28,7 +28,12 @@ namespace IntermittentFasting
             throw new NotImplementedException();
         }
 
-        public void NewUser(UserInfo newUser)
+        public void NewUser(User newUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateUser(int userID)
         {
             throw new NotImplementedException();
         }
