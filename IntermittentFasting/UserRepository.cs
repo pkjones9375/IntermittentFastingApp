@@ -1,6 +1,9 @@
-﻿using IntermittentFasting.Models;
+﻿using Dapper;
+using IntermittentFasting.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
+
 
 namespace IntermittentFasting
 {
@@ -8,17 +11,23 @@ namespace IntermittentFasting
     //UserID will act as Primary Key in SQL
     public class UserRepository : IUserRepository   
     {
-        public void DeleteUser(UserInfo userToDelete)
+        private readonly IDbConnection _conn;
+
+        public UserRepository(IDbConnection conn)
+        {
+            _conn = conn;
+        }
+        public void DeleteUser(User userToDelete)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<UserInfo> GetAllUsers()
+        public IEnumerable<User> GetAllUsers()
         {
-            throw new NotImplementedException();
+            return _conn.Query<User>("SELECT * From users;");
         }
 
-        public UserInfo GetUser(int userID)
+        public User GetUser(int userID)
         {
             throw new NotImplementedException();
         }
@@ -28,7 +37,12 @@ namespace IntermittentFasting
             throw new NotImplementedException();
         }
 
-        public void NewUser(UserInfo newUser)
+        public void NewUser(User newUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateUser(int userID)
         {
             throw new NotImplementedException();
         }
