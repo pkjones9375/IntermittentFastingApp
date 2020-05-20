@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace IntermittentFasting.Models
 {
-    public class UserInfo
+    public class User
     {
         public int UserID { get; set; }
         public string FirstName { get; set; }
