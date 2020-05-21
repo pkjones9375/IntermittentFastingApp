@@ -16,7 +16,6 @@ namespace IntermittentFasting
         public void DeleteUser(User userToDelete);
         
         //weight table
-
         public IEnumerable<WeightInfo> GetWeightInfo();
         public void WeighIn(WeightInfo newWeight);
     }
