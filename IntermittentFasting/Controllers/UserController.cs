@@ -21,33 +21,33 @@ namespace IntermittentFasting.Controllers
         public IActionResult Index()
         {
             //BRETT: creating the var 'users' and calling 'GetAllUsers' here
-            //Remind Jeremy to write this method
             var users = repo.GetAllUsers();
 
             return View(users);
         }
-    }
-
-    //Enable user to View a user by entering its UserID
-    public IActionResult ViewUser(int id)
-    {
-        var user = repo.GetUser(id);
-
-        return View(user);
-    }
 
 
-    //Entering the UpdateUser(int id) method here:
-    public IActionResult UpdateUser(int id)
-    {
-        UserRepository user = repo.GetUser(id);
-
-        repo.UpdateUser(user);
-
-        if(user == null)
+        //Enable user to View a user by entering its UserID
+        public IActionResult ViewUser(int id)
         {
-            return View("UserNotFound");
+            var user = repo.GetUser(id);
+
+            return View(user);
         }
-        return View(user);
+
+
+        //Entering the UpdateUser(int id) method here:
+        public IActionResult UpdateUser(int id)
+        {
+            UserRepository user = repo.GetUser(id);
+
+            repo.UpdateUser(user);
+
+            if (user == null)
+            {
+                return View("UserNotFound");
+            }
+            return View(user);
+        }
     }
 }
