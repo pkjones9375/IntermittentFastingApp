@@ -37,5 +37,11 @@ namespace IntermittentFasting
         {
             throw new NotImplementedException();
         }
+
+        public void UpdateUser(User user)
+        {
+            //***We need to figure out what parameters we want to update and how. How to update weight?
+            //_conn.Execute("UPDATE users SET ")
+        }
     }
 }
