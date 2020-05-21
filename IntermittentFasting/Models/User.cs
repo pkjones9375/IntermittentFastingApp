@@ -13,6 +13,8 @@ namespace IntermittentFasting.Models
         public string LastName { get; set; }
         public decimal HeightInInches { get; set; }
         public decimal StartWeight { get; set; }
+        //WeighIn added on 5.21 to tie in with UpdateUser View
+        public decimal WeighIn { get; set; }
         public DateTime FastStartDate { get; set; }
         public int TimeToFast { get; set; }
     }

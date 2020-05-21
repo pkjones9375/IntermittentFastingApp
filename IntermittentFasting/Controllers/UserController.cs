@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IntermittentFasting.Models;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -39,8 +40,9 @@ namespace IntermittentFasting.Controllers
         //Entering the UpdateUser(int id) method here:
         public IActionResult UpdateUser(int id)
         {
-            UserRepository user = repo.GetUser(id);
+            User user = repo.GetUser(id);
 
+            //**Write the UpdateUser() in UserRepository, maybe IUserRepository**
             repo.UpdateUser(user);
 
             if (user == null)
@@ -48,6 +50,14 @@ namespace IntermittentFasting.Controllers
                 return View("UserNotFound");
             }
             return View(user);
+        }
+
+        //Entering the UpdateUser() that should link back to User Views
+        public IActionResult UpdateUserToDatabase(User user)
+        {
+            repo.UpdateUser(user);
+
+            return RedirectToAction("ViewUser", new { id = user.UserID });
         }
     }
 }

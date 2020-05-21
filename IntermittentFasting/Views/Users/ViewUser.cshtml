@@ -2,7 +2,7 @@
 <!--ENTER THE BMI LINE UNDER 'StartWeight'-->
 @model User
 
-<h3>@Model.Name Information</h3>
+<h3>@Model.Name</h3>
 
 <table class="table">
     <tr>
@@ -27,3 +27,7 @@
         <td>@Model.TimeToFast</td>
     </tr>
 </table>
+
+<div style="display: block">
+    <a href="/User/UpdateUser/@Model.UserID">Update this User</a>
+</div>
