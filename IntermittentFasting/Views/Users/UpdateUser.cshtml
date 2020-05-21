@@ -1,1 +1,15 @@
-﻿
+﻿<!--Drafting the UpdateUser View below-->
+@model User
+
+<h2>Update @Model.Name</h2>
+
+@using (Html.BeginForm("UpdateUserToDatabase", "User", "Post"))
+{
+    <input asp-for="UserID" type="hidden" value="@Model.UserID" />
+    <label asp-for="Name" class="control-label">Name</label>
+    <input type="text" name="Name" class="form-control" value="@Model.Name" />
+    <!--5.21: Line on WeighIn added on to set up appropriate UpdateUser segment; tied to User Model-->
+    <label asp-for="WeighIn" class="control-label">WeighIn</label>
+    <input type="number" step="0.01" name="WeighIn" class="form-control" value="@Model.WeighIn" />
+    <input type="submit" value="Update Weigh in" class="btn btn-primary" />
+}
