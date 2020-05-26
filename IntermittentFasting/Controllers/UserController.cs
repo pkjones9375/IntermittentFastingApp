@@ -20,11 +20,12 @@ namespace IntermittentFasting.Controllers
         }
         // GET: /<controller>/
         public IActionResult Index()
+        //Each of these public methods corresponds with a View
         {
             //BRETT: creating the var 'users' and calling 'GetAllUsers' here
             var users = repo.GetAllUsers();
 
-            return View(users);
+            return View(users); //Returns the View of Index
         }
 
 
@@ -57,6 +58,7 @@ namespace IntermittentFasting.Controllers
         {
             repo.UpdateUser(user);
 
+            //This Redirect returns another method: "ViewUser()"
             return RedirectToAction("ViewUser", new { id = user.UserID });
         }
     }

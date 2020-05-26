@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-// BRETT'S NOTE: I think that this segment might be superfluous. Delete later?
 namespace IntermittentFasting
 {
     interface IUserRepository
@@ -11,10 +10,10 @@ namespace IntermittentFasting
         //our stubbed-out methods that PK wrote
         //user table 
         public IEnumerable<User> GetAllUsers();
-        public User GetUser(int userID);
-        public void NewUser(User newUser);
-        public void UpdateUser(User user);
-        public void DeleteUser(User userToDelete);
+        public User GetUser(int userID); //READ
+        public void NewUser(User newUser); //CREATE
+        public void UpdateUser(User user); //UPDATE
+        public void DeleteUser(User userToDelete); //DELETE
         
         //weight table
         public IEnumerable<WeightInfo> GetWeightInfo();
