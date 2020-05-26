@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 namespace IntermittentFasting
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
         //our stubbed-out methods that PK wrote
         //user table 

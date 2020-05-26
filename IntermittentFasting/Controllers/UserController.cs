@@ -12,9 +12,9 @@ namespace IntermittentFasting.Controllers
 {
     public class UserController : Controller
     {
-        private readonly UserRepository repo;
+        private readonly IUserRepository repo;
 
-        public UserController(UserRepository repo)
+        public UserController(IUserRepository repo)
         {
             this.repo = repo;
         }

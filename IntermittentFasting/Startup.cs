@@ -33,7 +33,7 @@ namespace IntermittentFasting
                 return conn;
             });
 
-            services.AddTransient<IUserRepository, UserRepository>(); //Does a UserRepository come after IFR here?
+            services.AddTransient<IUserRepository, UserRepository>();
 
             services.AddControllersWithViews();
         }
