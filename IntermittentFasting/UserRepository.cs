@@ -1,13 +1,22 @@
-﻿using IntermittentFasting.Models;
+﻿using Dapper;
+using IntermittentFasting.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace IntermittentFasting
 {
     //Here's the layout for our IF user info. Console will get/set BMI info
     //UserID will act as Primary Key in SQL
-    public class UserRepository : IUserRepository   
-    { //blah blah
+    public class UserRepository : IUserRepository
+    {
+        private readonly IDbConnection _conn;
+        
+        public UserRepository(IDbConnection conn)
+        {
+            _conn = conn;
+        }
+
         public void DeleteUser(User userToDelete)
         {
             throw new NotImplementedException();
@@ -15,7 +24,7 @@ namespace IntermittentFasting
 
         public IEnumerable<User> GetAllUsers()
         {
-            throw new NotImplementedException();
+            return _conn.Query<User>("SELECT * FROM users;");
         }
 
         public User GetUser(int userID)

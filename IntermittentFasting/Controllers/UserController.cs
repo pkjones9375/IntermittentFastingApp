@@ -29,7 +29,7 @@ namespace IntermittentFasting.Controllers
         }
 
 
-        //Enable user to View a user by entering its UserID
+      /*  //Enable user to View a user by entering its UserID
         public IActionResult ViewUser(int id)
         {
             var user = repo.GetUser(id);
@@ -60,6 +60,6 @@ namespace IntermittentFasting.Controllers
 
             //This Redirect returns another method: "ViewUser()"
             return RedirectToAction("ViewUser", new { id = user.UserID });
-        }
+        } */
     }
 }
