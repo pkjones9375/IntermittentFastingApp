@@ -7,7 +7,7 @@ namespace IntermittentFasting
     //Here's the layout for our IF user info. Console will get/set BMI info
     //UserID will act as Primary Key in SQL
     public class UserRepository : IUserRepository   
-    {
+    { //blah blah
         public void DeleteUser(User userToDelete)
         {
             throw new NotImplementedException();
