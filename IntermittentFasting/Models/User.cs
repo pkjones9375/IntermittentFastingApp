@@ -19,4 +19,3 @@ namespace IntermittentFasting.Models
         public int TimeToFast { get; set; }
     }
 }
-// blah blah
