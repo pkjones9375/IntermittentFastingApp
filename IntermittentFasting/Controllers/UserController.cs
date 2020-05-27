@@ -29,7 +29,7 @@ namespace IntermittentFasting.Controllers
         }
 
 
-      /*  //Enable user to View a user by entering its UserID
+        //Enable user to View a user by entering its UserID
         public IActionResult ViewUser(int id)
         {
             var user = repo.GetUser(id);
@@ -60,6 +60,31 @@ namespace IntermittentFasting.Controllers
 
             //This Redirect returns another method: "ViewUser()"
             return RedirectToAction("ViewUser", new { id = user.UserID });
-        } */
+        }
+
+        // Brett's edits: This next part may be extraneous:
+        // Step 1: create new user by using the webpage
+        public IActionResult InsertUser()
+        {
+            repo.NewUser(user); //B: Why does this one have the squiggles?
+
+            return View(user);
+        }
+
+        //Step 2: Insert new user into Intermittent Fasting database:
+        public IActionResult InsertUserToDatabase(User userToInsert)
+        {
+            repo.InsertUser(userToInsert);
+
+            return RedirectToAction("Index");
+        }
+
+        //Delete user, using the webpage to access the database:
+        public IActionResult DeleteUser(User user)
+        {
+            repo.DeleteUser(user);
+
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -12,8 +12,9 @@ namespace IntermittentFasting
         public IEnumerable<User> GetAllUsers();
         public User GetUser(int userID); //READ
         public void NewUser(User newUser); //CREATE
+        public void InsertUser(User userToInsert); //CREATE & INSERT
         public void UpdateUser(User user); //UPDATE
-        public void DeleteUser(User userToDelete); //DELETE
+        public void DeleteUser(User user); //DELETE
         
         //weight table
         public IEnumerable<WeightInfo> GetWeightInfo();

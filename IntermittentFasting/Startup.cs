@@ -28,7 +28,7 @@ namespace IntermittentFasting
             //BRETT: Here's where I added in the IoC code:
             services.AddScoped<IDbConnection>((s) =>
             {
-                IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("IFDB"));
+                IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("ifapp"));
                 conn.Open();
                 return conn;
             });
