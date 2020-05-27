@@ -52,5 +52,10 @@ namespace IntermittentFasting
             //***We need to figure out what parameters we want to update and how. How to update weight?
             //_conn.Execute("UPDATE users SET ")
         }
+
+        public void InsertUser(User userToInsert)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

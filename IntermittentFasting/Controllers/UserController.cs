@@ -64,12 +64,12 @@ namespace IntermittentFasting.Controllers
 
         // Brett's edits: This next part may be extraneous:
         // Step 1: create new user by using the webpage
-        public IActionResult InsertUser()
+        /*public IActionResult InsertUser()
         {
-            repo.NewUser(user); //B: Why does this one have the squiggles?
+            var user = repo.InsertUser(); //B: Why does this one have the squiggles?
 
             return View(user);
-        }
+        }*/
 
         //Step 2: Insert new user into Intermittent Fasting database:
         public IActionResult InsertUserToDatabase(User userToInsert)
