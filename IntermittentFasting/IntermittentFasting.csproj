@@ -13,6 +13,6 @@
 
 
   <ItemGroup>
-    <Folder Include="Views\Users\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
 </Project>
