@@ -61,6 +61,7 @@ namespace IntermittentFasting.Controllers
             //This Redirect returns another method: "ViewUser()"
             return RedirectToAction("ViewUser", new { id = user.UserID });
         }
+<<<<<<< HEAD
 
         // Brett's edits: This next part may be extraneous:
         // Step 1: create new user by using the webpage
@@ -71,6 +72,9 @@ namespace IntermittentFasting.Controllers
             return View(user);
         }*/
 
+=======
+       
+>>>>>>> 31cfd98b40b6b66c08b3290b6e7b84da3067d6d6
         //Step 2: Insert new user into Intermittent Fasting database:
         public IActionResult InsertUserToDatabase(User userToInsert)
         {

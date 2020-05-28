@@ -29,7 +29,8 @@ namespace IntermittentFasting
 
         public User GetUser(int userID)
         {
-            throw new NotImplementedException();
+            return (User)_conn.QuerySingle<User>("SELECT * FROM users WHERE userid = @id",
+                new { id = userID });
         }
 
         public IEnumerable<WeightInfo> GetWeightInfo()
@@ -55,6 +56,11 @@ namespace IntermittentFasting
         {
             //***We need to figure out what parameters we want to update and how. How to update weight?
             //_conn.Execute("UPDATE users SET ")
+        }
+
+        public void InsertUser(User userToInsert)
+        {
+            throw new NotImplementedException();
         }
     }
 }
