@@ -39,7 +39,11 @@ namespace IntermittentFasting
 
         public void NewUser(User newUser)
         {
-            throw new NotImplementedException();
+            _conn.Execute("INSERT INTO users (FIRSTNAME, LASTNAME, HEIGHTININCHES, STARTWEIGHT, TIMETOFAST) " +
+                "VALUES (@FirstName, @LastName, @HeightInInches, @StartWeight, @TimeToFast);",
+             new { FIRSTNAME = newUser.FirstName, LASTNAME = newUser.LastName, HEIGHTININCHES = newUser.HeightInInches, 
+                 STARTWEIGHT = newUser.StartWeight, TIMETOFAST = newUser.TimeToFast }) ;
+            
         }
 
         public void WeighIn(WeightInfo newWeight)
