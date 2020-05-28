@@ -11,7 +11,7 @@ namespace IntermittentFasting
         //user table 
         public IEnumerable<User> GetAllUsers();
         public User GetUser(int userID); //READ
-        public void NewUser(User newUser); //CREATE
+        public void NewUser(User newUser); //CREATE  //***Why is newUser a diff variable than user?
         public void InsertUser(User userToInsert); //CREATE & INSERT
         public void UpdateUser(User user); //UPDATE
         public void DeleteUser(User user); //DELETE
