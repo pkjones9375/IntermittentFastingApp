@@ -10,10 +10,8 @@ namespace IntermittentFasting
         //our stubbed-out methods that PK wrote
         //user table 
         public IEnumerable<User> GetAllUsers();
-        public User GetUser(int userID); //READ
         public void NewUser(User newUser); //CREATE
-        //public void InsertUser(User userToInsert); //CREATE & INSERT
-        public void InsertUser(User userToInsert); //CREATE & INSERT
+        public User GetUser(int userID); //READ
         public void UpdateUser(User user); //UPDATE
         public void DeleteUser(User user); //DELETE
         
