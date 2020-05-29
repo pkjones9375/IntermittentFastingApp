@@ -41,9 +41,12 @@ namespace IntermittentFasting
             
         }
 
+        //Inserts new weight info for user
         public void WeighIn(WeightInfo newWeight)
         {
-            throw new NotImplementedException();
+            _conn.Execute("INSERT INTO weights(WeighIn, WeighInDate, UserID) VALUES(@WeighIn, @Date @UserID)",
+                new { WeighIn = newWeight.WeighIn, date = newWeight.WeighIn, UserID = newWeight.UserID });
+            //***Need to connect this in UserController, UpdateUser***
         }
 
         public void UpdateUser(User user)
