@@ -16,12 +16,6 @@ namespace IntermittentFasting
         {
             _conn = conn;
         }
-
-        public void DeleteUser(User userToDelete)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<User> GetAllUsers()
         {
             return _conn.Query<User>("SELECT * FROM users;");
@@ -56,6 +50,13 @@ namespace IntermittentFasting
         {
             //***We need to figure out what parameters we want to update and how. How to update weight?
             //_conn.Execute("UPDATE users SET ")
+        }
+
+        //DELETE user. Connects to UserController
+        public void DeleteUser(User userToDelete)
+        {
+            _conn.Execute("DELETE FROM users WHERE UserID = @id;",
+                new { id = userToDelete.UserID }); //B: I'm guessing on this variable name
         }
     }
 }
