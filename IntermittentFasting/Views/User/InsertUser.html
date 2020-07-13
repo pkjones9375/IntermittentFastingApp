@@ -1,0 +1,31 @@
+﻿@model User
+<!--7.13.20 Building this InsertUser page by adapting the InsertProduct View from ASPTesting app-->
+
+<h2>Create a New User</h2>
+@using (Html.BeginForm("InsertUserToDatabase", "User", "Post"))
+{
+    <input asp-for=""UserID" type="hidden" value="" />
+    <label asp-for="FirstName" class="control-label">First Name</label> <!--link input to User Model-->
+    <input type="text" name="FirstName" class="form-control" value="" />
+    <label asp-for="LastName" class="control-label">Last Name</label>
+    <input type="text" name="LastName" class="form-control" value="" />
+    
+}
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+    -->
