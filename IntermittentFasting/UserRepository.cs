@@ -38,7 +38,6 @@ namespace IntermittentFasting
                 "VALUES (@FirstName, @LastName, @HeightInInches, @StartWeight, @TimeToFast);",
              new { FIRSTNAME = newUser.FirstName, LASTNAME = newUser.LastName, HEIGHTININCHES = newUser.HeightInInches, 
                  STARTWEIGHT = newUser.StartWeight, TIMETOFAST = newUser.TimeToFast }) ;
-            
         }
 
         //Inserts new weight info for user
@@ -49,10 +48,13 @@ namespace IntermittentFasting
             //***Need to connect this in UserController, UpdateUser***
         }
 
+        //**7.13 Entered the UpdateUser details
         public void UpdateUser(User user)
         {
-            //***We need to figure out what parameters we want to update and how. How to update weight?
-            //_conn.Execute("UPDATE users SET ")
+            _conn.Execute("INSERT INTO users (FIRSTNAME, LASTNAME, HEIGHTININCHES, STARTWEIGHT, TIMETOFAST) " +
+                "VALUES (@FirstName, @LastName, @HeightInInches, @StartWeight, @TimeToFast);",
+                new { FIRSTNAME = user.FirstName, LASTNAME = user.LastName, HEIGHTININCHES = user.HeightInInches,
+                STARTWEIGHT = user.StartWeight, TIMETOFAST = user.TimeToFast }) ;
         }
 
         //DELETE user. Connects to UserController
