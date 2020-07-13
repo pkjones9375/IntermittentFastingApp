@@ -11,7 +11,7 @@ namespace IntermittentFasting
         //user table 
         public IEnumerable<User> GetAllUsers();
         public void NewUser(User newUser); //CREATE
-        public User GetUser(int userID); //READ
+        public User GetUser(int userID);   //READ
         public void UpdateUser(User user); //UPDATE
         public void DeleteUser(User user); //DELETE
         
