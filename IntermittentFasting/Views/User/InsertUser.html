@@ -7,8 +7,21 @@
     <input asp-for=""UserID" type="hidden" value="" />
     <label asp-for="FirstName" class="control-label">First Name</label> <!--link input to User Model-->
     <input type="text" name="FirstName" class="form-control" value="" />
+
     <label asp-for="LastName" class="control-label">Last Name</label>
     <input type="text" name="LastName" class="form-control" value="" />
+
+    <label asp-for="HeightInInches" class="control-label">Height in Inches</label>
+    <input type="number" step="0.1" name="HeightInInches" class="form-control" />
+
+    <label asp-for="StartWeight" class="control-label">Starting Weight</label>
+    <input type="number" step="0.01" name="StartWeight" class="form-control" />
+
+    <label asp-for="FastStartDate" class="control-label">Fast Start (Today's Date):</label>
+    <input type="datetime-local" name="FastStartDate" class="form-control" />
+
+<!--7.13 Going to tie off coding here and make sure User Model, UserController sync with this file-->
+<input type="submit" value="Create User" class="btn btn-primary" />
     
 }
 
